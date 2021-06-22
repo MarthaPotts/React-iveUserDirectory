@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-ive User Directory App User Profile</title>
+    <style>
+        #userRender-container {
+            border: solid 1px red;
+            margin: 5px; 
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column; 
+            justify-content: space-evenly;
+
+        }
+        .heading-link {
+            border: solid 1px green;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px; 
+            margin: 5px;     
+        }
+        .thumbnail {
+            border: 1px solid blue;
+            margin: 5px; 
+            /* border-radius: 50%;  */
+        }
+        .user-heading {
+            display: flex; 
+        }
+        .thumb-holder {
+            border: solid 2px black;
+            /* border-radius: 50%;  */
+            margin: 5px; 
+            padding: 5px; 
+        }
+        #user-profile-container {
+            border: 1px solid purple;
+            padding: 5px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+        }
+        #img-container {
+            border: 1px solid orange; 
+        }
+        #name {
+
+        }
+        .userInfo {
+
+        }
+        #login {
+
+        }
+        #phone {
+
+        }
+        #email {
+
+        }
+        #dob {
+
+        }
+        #wrapper {
+            display: flex;
+            justify-content: space-around;
+    
+        }
+        .searchForm-container {
+            margin: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- rendering a table of users from API data -->
+
+    <div class="searchForm-container">
+      <form id="search">
+          <label for="searchbox">Search User Directory</label>
+          <input type="search" data-table="table-data" placeholder="Search/Filter"/>
+      </form>
+    </div>
+      <!-- dynamically generate these for each user returned from query -->
+      <div id="wrapper">
+      <div id="userRender-container">
+        <div class="user-heading">
+            <div class="thumb-holder"><a href=#><img data-image="Image" class="thumbnail" src=# alt="User thumbnail image"/></a></div>
+
+            <a href=# class="heading-link"><p class="name" data-name="Name">Jane Doe</p></a>
+        </div>
+
+
+        <div id="userRender-container">
+            <div class="user-heading">
+                <div class="thumb-holder"><a href=#><img class="thumbnail" src=# alt="User thumbnail image"/></a></div>
+    
+                <a href=# class="heading-link"><p class="name">Jane Doe</p></a>
+            </div>
+          </div>
+          <div id="userRender-container">
+            <div class="user-heading">
+                <div class="thumb-holder"><a href=#><img class="thumbnail" data-image="Image" src=# alt="User thumbnail image"/></a></div>
+    
+                <a href=# class="heading-link"><p class="name">Jane Doe</p></a>
+            </div>
+          </div>
+          <div id="userRender-container">
+            <div class="user-heading">
+                <div class="thumb-holder"><a href=#><img class="thumbnail" src=# alt="User thumbnail image"/></a></div>
+    
+                <a href=# class="heading-link"><p class="name" data-name="Name">Jane Doe</p></a>
+            </div>
+          </div>
+          <div id="userRender-container">
+            <div class="user-heading">
+                <div class="thumb-holder"><a href=#><img class="thumbnail" src=# alt="User thumbnail image"/></a></div>
+    
+                <a href=# class="heading-link"><p class="name">Jane Doe</p></a>
+            </div>
+          </div>
+      </div>
+      
+      <aside id="user-profile-container">
+          <div id="img-container" data-image="Image">Image Goes in Here</div>
+          <h3 id="name" data-name="Name">Jane Doe</h3>
+          <div class="userInfo">
+              <p id="login" data-login="Login">Login:</p>
+              <p id="phone" data-phone="Phone">Phone: </p>
+              <p id="email" data-email="Email">Email:</p>
+              <p id="dob" data-dob="DOB">D.o.B:</p>
+          </div>
+      </aside>
+    </div>
+
+<!-- <script>
+
+    let renderMainEl = document.getElementById('userRender-container'); 
+    let cardEl = document.createElement('div'); 
+    cardEl.setAttribute('class', 'user-heading'); 
+    renderMainEl.appendChild(cardEl); 
+
+    let thumbEl = document.createElement('div'); 
+    thumbEl.setAttribute('class', 'thumb-holder'); 
+    cardEl.appendChild(thumbEl); 
+// error at line 77: parameter 1 is note type of 'Node'
+    let imgLinkEl = document.createElement('a'); 
+    imgLinkEl.setAttribute('href', '#'); 
+    thumbEl.appendChild('imgLinkEl'); 
+
+    let imgEl = document.createElement('img'); 
+    imgEl.setAttribute('class', 'thumbnail'); 
+    imgEl.setAttribute('src', '#'); 
+    imgEl.setAttribute('alt', 'User thumbnail image'); 
+    thumbEl.appendChild(imgEl); 
+
+    let nameLinkEl = document.createElement('a'); 
+    nameLinkEl.setAttribute('href', '#'); 
+    nameLinkEl.setAttribute('class', 'heading-link'); 
+    cardEl.appendChild(nameLinkEl); 
+
+    let nameEl = document.createElement('p'); 
+    nameEl.setAttribute('class', 'name'); 
+    nameEl.textContent = 'John Doe'; 
+    nameLinkEl.appendChild(nameEl);
+
+</script> -->
+
+</body>
+</html>

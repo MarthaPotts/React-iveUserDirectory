@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-ive User Directory App</title>
+    <style>
+        #userRender-container {
+            border: solid 1px red;
+            margin: 5px; 
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row; 
+            justify-content: space-evenly;  
+        }
+        .heading-link {
+            border: solid 1px green;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px; 
+            margin: 5px;     
+        }
+        .thumbnail {
+            border: 1px solid blue;
+            margin: 5px; 
+            /* border-radius: 50%;  */
+        }
+        .user-heading {
+            display: flex; 
+        }
+        .thumb-holder {
+            border: solid 2px black;
+            /* border-radius: 50%;  */
+            margin: 5px; 
+            padding: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- rendering a table of users from API data -->
+    <div class="searchForm-container">
+      <form id="search">
+          <label for="searchbox">Search User Directory</label>
+          <input type="search" data-table="table-data" placeholder="Search/Filter"/>
+      </form>
+    </div>
+      <!-- dynamically generate these for each user returned from query -->
+      <div id="userRender-container">
+        <div class="user-heading">
+            <div class="thumb-holder"><a href=#><img class="thumbnail" src=# alt="User thumbnail image"/></a></div>
+
+            <a href=# class="heading-link"><p class="name">Jane Doe</p></a>
+        </div>
+      </div>
+
+<!-- <script>
+
+    let renderMainEl = document.getElementById('userRender-container'); 
+    let cardEl = document.createElement('div'); 
+    cardEl.setAttribute('class', 'user-heading'); 
+    renderMainEl.appendChild(cardEl); 
+
+    let thumbEl = document.createElement('div'); 
+    thumbEl.setAttribute('class', 'thumb-holder'); 
+    cardEl.appendChild(thumbEl); 
+// error at line 77: parameter 1 is note type of 'Node'
+    let imgLinkEl = document.createElement('a'); 
+    imgLinkEl.setAttribute('href', '#'); 
+    thumbEl.appendChild('imgLinkEl'); 
+
+    let imgEl = document.createElement('img'); 
+    imgEl.setAttribute('class', 'thumbnail'); 
+    imgEl.setAttribute('src', '#'); 
+    imgEl.setAttribute('alt', 'User thumbnail image'); 
+    thumbEl.appendChild(imgEl); 
+
+    let nameLinkEl = document.createElement('a'); 
+    nameLinkEl.setAttribute('href', '#'); 
+    nameLinkEl.setAttribute('class', 'heading-link'); 
+    cardEl.appendChild(nameLinkEl); 
+
+    let nameEl = document.createElement('p'); 
+    nameEl.setAttribute('class', 'name'); 
+    nameEl.textContent = 'John Doe'; 
+    nameLinkEl.appendChild(nameEl);
+
+</script> -->
+
+</body>
+</html>

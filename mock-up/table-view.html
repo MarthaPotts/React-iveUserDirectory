@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-ive User Directory Table View</title>
+    <style>
+        td, th {
+            padding: 10px; 
+        }
+        #table-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+    </style>
+</head>
+<body>
+    <main id="table-wrapper">
+    <header>
+        <h1>React-ive User Directory</h1>
+    </header>
+
+    <table id="table">
+        <colgroup>
+            <col style="background-color: paleturquoise" span="6" >
+        </colgroup>
+        <!-- th: table header; bold,centered/columns
+        td: table data/cell 
+        tr: table row
+        make tr of all th, then tr of all td -->
+
+        <!-- data-* values are strings, number values must be quoted 
+        JS access => getAttribute('fullHtmlName') || dataset property: hyphens/dashes are converted to camelCase
+        <article id="electric-cars" data-columns="3" data-index-number="1234" data-parent="cars"></article>
+        const article = document.querySelector('#electric-cars'); 
+        article.dataset.columns 
+        article.dataset.indexNumber 
+        article.dataset.parent 
+        => article.dataset.columns=5 changes that attribute to "5"
+        *Can be used to store data that is always changing
+        *can use CSS attribute selectors to change styles according to the data
+        article[data-columns='3'] {width: 400px} 
+        article[data-columns='4'] {width: 600px}-->
+
+    <thead>
+        <tr>
+            <th>IMG</th>
+            <th>NAME</th>
+            <th>LOGIN</th>
+            <th>PHONE</th>
+            <th>EMAIL</th>
+            <th>DOB</th>
+        </tr>
+        
+    </thead>
+
+    <tbody>
+        <tr>
+            <td data-image="Image">image</td>
+            <td data-name="Name">firstName lastName</td>
+            <td data-login="Login">login</td>
+            <td data-phone="Phone">phone</td>
+            <td data-email="Email">email@mail.com</td>
+            <td data-dob="DOB">05/21/1979</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>firstName lastName</td>
+            <td>login</td>
+            <td>phone</td>
+            <td>email@mail.com</td>
+            <td>05/21/1979</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>firstName lastName</td>
+            <td>login</td>
+            <td>phone</td>
+            <td>email@mail.com</td>
+            <td>05/21/1979</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>firstName lastName</td>
+            <td>login</td>
+            <td>phone</td>
+            <td>email@mail.com</td>
+            <td>05/21/1979</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>firstName lastName</td>
+            <td>login</td>
+            <td>phone</td>
+            <td>email@mail.com</td>
+            <td>05/21/1979</td>
+        </tr>
+    </tbody>
+
+    </table>
+    </main>
+</body>
+</html>
