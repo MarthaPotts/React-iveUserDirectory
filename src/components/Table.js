@@ -3,32 +3,16 @@ import React from 'react';
 
 //code 
 // may  need to move this wrapper: was just to render it centered 
-<main id="table-wrapper">
+{/* <main id="table-wrapper">
     <header>
         <h1>React-ive User Directory</h1>
-    </header>
-
+    </header> */}
+function Table({}){
+    return(
     <table id="table">
         <colgroup>
-            <col style="background-color: paleturquoise" span="6" >
+            <col style="background-color: paleturquoise" span="6" ></col>
         </colgroup>
-        {/* <!-- th: table header; bold,centered/columns
-        td: table data/cell 
-        tr: table row
-        make tr of all th, then tr of all td -->
-
-        <!-- data-* values are strings, number values must be quoted 
-        JS access => getAttribute('fullHtmlName') || dataset property: hyphens/dashes are converted to camelCase
-        <article id="electric-cars" data-columns="3" data-index-number="1234" data-parent="cars"></article>
-        const article = document.querySelector('#electric-cars'); 
-        article.dataset.columns 
-        article.dataset.indexNumber 
-        article.dataset.parent 
-        => article.dataset.columns=5 changes that attribute to "5"
-        *Can be used to store data that is always changing
-        *can use CSS attribute selectors to change styles according to the data
-        article[data-columns='3'] {width: 400px} 
-        article[data-columns='4'] {width: 600px}--> */}
 
     <thead>
         <tr>
@@ -86,7 +70,8 @@ import React from 'react';
     </tbody>
 
     </table>
-    </main>
+    // </main>
+    )
+}
 
-{/* //export  */}
-export default
+export default Table; 

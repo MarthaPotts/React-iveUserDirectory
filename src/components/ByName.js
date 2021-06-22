@@ -2,14 +2,26 @@
 import React from 'react'; 
 
 //code here 
-<!-- dynamically generate these for each user returned from query -->
-<div id="userRender-container">
-  <div class="user-heading">
-      <div class="thumb-holder"><a href=#><img data-image="Image" class="thumbnail" src=# alt="User thumbnail image"/></a></div>
+// <!-- dynamically generate these for each user returned from query -->
+function ByName({}){
+    return(
 
-      <a href=# class="heading-link"><p data-name="Name" class="name">Jane Doe</p></a>
+<div id="userRender-container">
+  <div className="user-heading">
+      <div className="thumb-holder"><a href=#>
+      <img 
+      data-image="Image" 
+      className="thumbnail" 
+      src={picture.thumbnail} 
+      alt={name.first + " " + name.last + "thumbnail image"}
+      />
+      </a>
+      </div>
+
+      <a href=# className="heading-link"><p data-name="Name" className="name">{name.first + " " + name.last}</p></a>
   </div>
 </div>
-
+    )
+}
 //export 
-export default
+export default ByName; 
